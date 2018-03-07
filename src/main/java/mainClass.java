@@ -8,7 +8,7 @@ public class mainClass {
         columnName.add("Full Name");
         columnName.add("First name");
         columnName.add("Auto");
-        columnName.add("phone");
+        columnName.add("phone number");
         columnName.add("annual revenue");
 
         fieldName.add("auto");
@@ -17,7 +17,7 @@ public class mainClass {
         fieldName.add("ph");
         fieldName.add("name");
         fieldName.add("full");
-
+        fieldName.add("pho no.");
         fieldName.add("phone no.");
         fieldName.add("phone number");
         fieldName.add("auto number");
@@ -26,24 +26,10 @@ public class mainClass {
         fieldName.add("annual revenue");
         fieldName.add("reven");
 
-
-
-
-//
-        tryTesting fuzzy = new tryTesting();
+        FieldMatchFinder fuzzy = new FieldMatchFinder();
         List<String> strings = fuzzy.fuzzyMatch(columnName, fieldName);
         for(String s: strings){
             System.out.println(s);
         }
-//
-//       logicMatcher match = new logicMatcher();
-//        match.logicMatch(columnName,fieldName);
-       /* tryAgain1 try1 = new tryAgain1();
-        List<String> matchedFields = try1.findMatchedFields(columnName, fieldName);
-        for(String s: matchedFields){
-            System.out.println(s);
-        }*/
-
-
     }
 }
